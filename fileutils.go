@@ -23,7 +23,7 @@ func cpDir(destDir, sourceDir string, mode os.FileMode) error {
 		if info.IsDir() {
 			return os.MkdirAll(filepath.Join(destDir, relPath), mode)
 		} else {
-			return cp(filepath.Join(destDir, relPath), path)
+			return cp(filepath.Join(destDir, relPath), path, mode)
 		}
 	})
 }
