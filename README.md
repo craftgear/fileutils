@@ -1,10 +1,11 @@
 # fileutils
+
 file manipulation related functions
 
-## cp
+## Cp(dest, src, mode)
 
 copy a single file.
 
-## cpDir
+## CpDir(destDir, srcDir, mode)
 
 copy a directory recursively.

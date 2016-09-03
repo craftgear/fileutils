@@ -6,7 +6,7 @@ import (
 	"path/filepath"
 )
 
-func cp(dest, source string, mode os.FileMode) error {
+func Cp(dest, source string, mode os.FileMode) error {
 	b, err := ioutil.ReadFile(source)
 	if err != nil {
 		return err
@@ -14,7 +14,7 @@ func cp(dest, source string, mode os.FileMode) error {
 	return ioutil.WriteFile(dest, b, mode)
 }
 
-func cpDir(destDir, sourceDir string, mode os.FileMode) error {
+func CpDir(destDir, sourceDir string, mode os.FileMode) error {
 	return filepath.Walk(sourceDir, func(path string, info os.FileInfo, err error) error {
 		relPath, _ := filepath.Rel(sourceDir, path)
 		if relPath == "." {
